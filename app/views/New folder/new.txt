@@ -1,0 +1,14 @@
+ssh-keygen -t rsa -C "ashish.goojar@yahoo.com"
+
+
+git config --global user.name "ashishgoojar"
+
+
+git config --global user.email ashish.goojar@yahoo.com
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/ashishgoojar/RulersofIndia.git
+git push -u origin master
