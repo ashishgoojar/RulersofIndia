@@ -1,14 +1,69 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "DoI", root_path, id: "logo" %>
+      <%= link_to "NoI", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
+ 
           <% if signed_in? %>
-            <li><%= link_to "Users", users_path %></li>
-            <li id="fat-menu" class="dropdown">
+
+
+		<li id="fat-menu" class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              		Day-to-Day <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+              <li><a href="http://paper.hindustantimes.com/", target="_blank">Newspaper</a></li>  
+  
+                <li><a href="http://www.easymobilerecharge.com", target="_blank">Mobile Recharge</a></li>
+              </ul>
+            </li>
+
+
+		<li id="fat-menu" class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              		Entertainment <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+  <li><a href="http://in.bookmyshow.com", target="_blank">Movie Tickets</a></li>
+                <li><a href="http://www.desimartini.com/bollywood-trailers.htm", target="_blank">Bollywood Trailers</a></li>
+                <li><a href="http://www.whatsonindia.com/WhatsOnTV/", target="_blank">TV channel Listings</a></li>
+              </ul>
+            </li>
+
+
+		<li id="fat-menu" class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              		Shopping <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+              <li><a href="http://www.jabong.com", target="_blank">Fashion</a></li>  
+                <li><a href="http://www.homeshop18.com/footwear-store?", target="_blank">Shoes</a></li>
+		<li><a href="http://www.lenskart.com", target="_blank">Eye Gears</a></li>
+          
+                </ul>
+            </li>
+
+
+
+		<li id="fat-menu" class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              		Travelling <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+              <li><a href="http://www.irctc.co.in", target="_blank">Railways</a></li>  
+  
+                <li><a href="http://www.yatra.com", target="_blank">Flights</a></li>
+              </ul>
+            </li>
+
+
+
+
+<li><%= link_to "Users", users_path %></li>
+
+	    <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Account <b class="caret"></b>
               </a>
@@ -19,9 +74,13 @@
                 <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>
                 </li>
-              </ul>
-            </li>
+		</ul>
+		
+
+	    
+	    
           <% else %>
+	           <li><%= link_to "Help", help_path %></li>
             <li><%= link_to "Sign in", signin_path %></li>
           <% end %>
         </ul>

@@ -7,13 +7,17 @@
 	<p>
         <%= @user.name %>
 	</p>
-	<b>VoterID:</b>
-	<%= @user.created_at.hour %><%= @user.created_at.day %><%= @user.created_at.month %><%= @user.created_at.year-2000 %><%= @user.created_at.sec %><%= @user.created_at.min %>
-	<b>Constituency:</b>
-	<%= @user.constituency %>
 	<p>
-	  <b>Age:</b>
-	  <%= @user.age %>
+	VoterID:
+	<%= @user.created_at.hour %><%= @user.created_at.day %><%= @user.created_at.month %><%= @user.created_at.year-2000 %><%= @user.created_at.sec %><%= @user.created_at.min %>
+	</p>
+	<p>
+	Constituency:
+	<%= @user.constituency %>
+	</p>
+	<p>
+	  <b>Age:
+	  <%= @user.age %></b>
 	</p>
       </h1>
     </section>
