@@ -1,0 +1,14 @@
+remove_column :users, :age
+
+rails generate migration RemoveFieldNameFromTableName age:fixnum
+
+
+rails g migration remove_age_from_users age:fixnum
+
+ user = User.show
+
+ALTER TABLE Users ALTER COLUMN age TYPE integer
+
+rails g migration change_data_type_for_age age: integers
+
+rails g migration RemoveAgeFromUsers age:fixnum
