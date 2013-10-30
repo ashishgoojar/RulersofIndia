@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131013125823) do
+ActiveRecord::Schema.define(version: 20131029105850) do
+
+  create_table "constituentcy1s", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "constituentcy1s", ["user_id", "created_at"], name: "index_constituentcy1s_on_user_id_and_created_at"
+
+  create_table "constituentcy2s", force: true do |t|
+    t.string   "con_name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "constituentcy2s", ["user_id", "created_at"], name: "index_constituentcy2s_on_user_id_and_created_at"
 
   create_table "data_files", force: true do |t|
     t.datetime "created_at"

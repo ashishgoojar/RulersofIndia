@@ -1,0 +1,13 @@
+<a href="http://en.wikipedia.org/wiki/India"
+target="_blank"><img src="download.png"/</a>
+
+
+
+  <%= link_to image_tag("download.png", alt: "Satyamev Jayate"), 'http://en.wikipedia.org/wiki/India', target="_blank" %>
+
+
+
+
+git@heroku.com:netizensofindia.git
+
+git remote add heroku git@heroku.com:netizensofindia.git

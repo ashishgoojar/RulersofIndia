@@ -21,10 +21,16 @@
       <%=  f.text_field :constituency %>
              <%= f.label :Age%>
       <%=  f.text_field :age %>
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
-    <% end %>
+     
 
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails">change</a>
+<%= image_tag(@user.avatar_url) if @user.avatar_url %>
+<p>
+      <%= f.label :avatar, "Upload file:" %><br />
+      <%= f.file_field :avatar %>
+      <%= f.hidden_field :avatar_cache %>
+    </p>
+    
+     <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
   </div>
 </div>

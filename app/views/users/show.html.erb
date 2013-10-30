@@ -3,7 +3,9 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= gravatar_for @user %>
+        <p>
+<%= image_tag(@user.avatar_url) if @user.avatar_url %>
+</p>
 	<p>
         <%= @user.name %>
 	</p>
@@ -12,14 +14,26 @@
 	<%= @user.created_at.hour %><%= @user.created_at.day %><%= @user.created_at.month %><%= @user.created_at.year-2000 %><%= @user.created_at.sec %><%= @user.created_at.min %>
 	</p>
 	<p>
-	Constituency:
+	State:
 	<%= @user.constituency %>
 	</p>
 	<p>
 	  <b>Age:
 	  <%= @user.age %></b>
 	</p>
-      </h1>
+
+	<p>
+	  <b>Public Respect:
+	  <%= @user.PR %></b>
+	</p>
+
+	<p>
+	  <b>Mudras:
+	  <%= @user.Mudras %></b>
+	</p>
+
+
+</h1>
     </section>
     <section>
       <%= render 'shared/stats' %>

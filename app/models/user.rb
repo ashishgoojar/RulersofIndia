@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
 validates :constituency, presence: true, length: { maximum: 50 }
 validates :age, presence: true, length: { maximum: 2 }, numericality: true
-
+ mount_uploader :avatar, AvatarUploader
 def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
